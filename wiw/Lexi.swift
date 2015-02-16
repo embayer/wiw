@@ -16,7 +16,7 @@ class Lexi {
     ]
 
     // TODO Double is enough
-    let letterFrequency: [Character: [String: Float]] = [
+    let letterFrequencyP: [Character: [String: Float]] = [
         "e": ["from": 83.08, "to": 100.00],     // 16.92
         "n": ["from": 72.55, "to": 83.08],      // 10.53
         "i": ["from": 64.53, "to": 72.55],      // 8.02
@@ -47,6 +47,39 @@ class Lexi {
         "y": ["from": 0.07, "to": 0.12],        // 0.05
         "x": ["from": 0.02, "to": 0.07],        // 0.05
         "q": ["from": 0.00, "to": 0.02],        // 0.02
+    ]
+    
+    let letterFrequency: [Character: [String: Int]] = [
+        "e": ["from": 8308, "to": 10000],     // 16.92
+        "n": ["from": 7255, "to": 8308],      // 10.53
+        "i": ["from": 6453, "to": 7255],      // 8.02
+        "r": ["from": 5764, "to": 6453],      // 6.89
+        "s": ["from": 5122, "to": 5764],      // 6.42
+        "t": ["from": 4543, "to": 5122],      // 5.79
+        "a": ["from": 3985, "to": 4543],      // 5.58
+        "h": ["from": 3487, "to": 3985],      // 4.98
+        "d": ["from": 2989, "to": 3487],      // 4.98
+        "u": ["from": 2606, "to": 2989],      // 3.83
+        "l": ["from": 2246, "to": 2606],      // 3.60
+        "c": ["from": 1930, "to": 2246],      // 3.16
+        "g": ["from": 1628, "to": 1930],      // 3.02
+        "m": ["from": 1373, "to": 1628],      // 2.55
+        "o": ["from": 1149, "to": 1373],      // 2.24
+        "b": ["from": 953, "to": 1149],       // 1.96
+        "w": ["from": 775, "to": 953],        // 1.78
+        "f": ["from": 626, "to": 775],        // 1.49
+        "k": ["from": 494, "to": 626],        // 1.32
+        "z": ["from": 373, "to": 494],        // 1.21
+        "v": ["from": 289, "to": 373],        // 0.84
+        "p": ["from": 222, "to": 289],        // 0.67
+        "ü": ["from": 157, "to": 222],        // 0.65
+        "ä": ["from": 103, "to": 157],        // 0.54
+        "ß": ["from": 66, "to": 103],         // 0.37
+        "ö": ["from": 36, "to": 66],          // 0.30
+        "j": ["from": 12, "to": 36],          // 0.24
+        "y": ["from": 7, "to": 12],           // 0.05
+        "x": ["from": 2, "to": 7],            // 0.05
+        "q": ["from": 0, "to": 2],            // 0.02
     ]
 
     let scrabbleLetterScore: [Character: Int] = [
@@ -106,7 +139,7 @@ class Lexi {
     func getRandomLetter() -> Character {
         // TODO implement difficulty
         var resultLetter: Character? = nil
-        var freq: Float = randomRangeFloat(0.00, 100.00)
+        var freq: Int = randomRangeInt(0...10000)
         
         // find the letter in that range
         for (letter, fromTo) in letterFrequency {

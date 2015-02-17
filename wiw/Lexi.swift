@@ -153,13 +153,13 @@ class Lexi {
     
     /// doc me
     func getRandomString(len: Int) -> String {
-        var randomString: String? = ""
+        var randomString: String = ""
         for index in 0..<len {
-            randomString.append(getRandomLetter())
-            randomString += getRandomLetter()
+            var c: Character = getRandomLetter()
+            randomString.append(c)
         }
         
-        return randomString!
+        return randomString
     }
     
     /// doc me
@@ -173,13 +173,13 @@ class Lexi {
         var from: Int = 0
         var to: Int = columns
         for index in 0...rows {
-            var slice: String = randomString[from..to]
+            var slice: String = randomString.substringWithRange(from..to)
             letterMatrix.append(slice)
             
             from = to
-            to = colums
+            to = columns
         }
         
-        return result
+        return letterMatrix
     }
 }

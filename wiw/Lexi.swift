@@ -10,11 +10,11 @@ import Foundation
 
 // TODO docstring
 class Lexi {
-
+    
     let alphabet: [Character] = [
         "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "ä", "ö", "ß", "ü"
     ]
-
+    
     // TODO Double is enough
     let letterFrequencyP: [Character: [String: Float]] = [
         "e": ["from": 83.08, "to": 100.00],     // 16.92
@@ -81,7 +81,7 @@ class Lexi {
         "x": ["from": 2, "to": 7],            // 0.05
         "q": ["from": 0, "to": 2],            // 0.02
     ]
-
+    
     let scrabbleLetterScore: [Character: Int] = [
         "e": 1,         // 15 <- amount
         "n": 1,         // 9
@@ -114,15 +114,15 @@ class Lexi {
         "q": 10,        // 1
         "y": 10,        // 1
     ]
-
-
+    
+    
     /// dice a random Int within a given range
     /// :param: inRange range between the desired lowest and highest possible value
     /// :returns: a random Int within the range
     func randomRangeInt(inRange: Range<Int>) -> Int {
         return Int(inRange.startIndex + arc4random_uniform(inRange.endIndex - inRange.startIndex + 1))
     }
-
+    
     /// dice a random Int within a given range
     /// :param: lower desired lowest possible value
     /// :param: upper desired highest possible value
@@ -133,7 +133,7 @@ class Lexi {
         // TODO Double is enough
         return Float((Double(arc4random()) / arc4randoMax) * (upper - lower) + lower)
     }
-
+    
     /// dice a letter based on the language letter frequency distribution
     /// :returns: a random letter based on the language letter frequency distribution
     func getRandomLetter() -> Character {
@@ -149,5 +149,37 @@ class Lexi {
         }
         
         return resultLetter!
+    }
+    
+    /// doc me
+    func getRandomString(len: Int) -> String {
+        var randomString: String? = ""
+        for index in 0..<len {
+            randomString.append(getRandomLetter())
+            randomString += getRandomLetter()
+        }
+        
+        return randomString!
+    }
+    
+    /// doc me
+    func buildLetterMatrix(rows: Int, columns: Int) -> [String] {
+        // TODO limit bounds?
+        var letterMatrix: [String] = []
+        
+        let letterAmount: Int = rows * columns
+        let randomString: String = getRandomString(letterAmount)
+        
+        var from: Int = 0
+        var to: Int = columns
+        for index in 0...rows {
+            var slice: String = randomString[from..to]
+            letterMatrix.append(slice)
+            
+            from = to
+            to = colums
+        }
+        
+        return result
     }
 }

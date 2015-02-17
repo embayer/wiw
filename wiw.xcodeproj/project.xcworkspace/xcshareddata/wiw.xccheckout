@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4CB38BC4-0DB6-4C25-9C5F-24A2405C27CB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>wiw</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E118DC20BA147C770EDE7BDA64EA4961F1946E26</key>
+		<string>https://github.com/embayer/wiw.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>wiw.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E118DC20BA147C770EDE7BDA64EA4961F1946E26</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/embayer/wiw.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E118DC20BA147C770EDE7BDA64EA4961F1946E26</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E118DC20BA147C770EDE7BDA64EA4961F1946E26</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wiw</string>
+		</dict>
+	</array>
+</dict>
+</plist>
